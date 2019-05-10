@@ -25,9 +25,6 @@ class Principal(Screen):
         opcion = self.ids.funcion.text
 
         if opcion == "Cuadrada":
-
-            #self.ids.resultados.text = "Hola quesitos"
-
             serieFourierCuadrada(s, r, n)
         else:
             serieFourierTriangular(s, r, n)

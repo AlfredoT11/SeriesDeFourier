@@ -94,6 +94,7 @@ def serieFourierTriangular(s, r, n):
     plt.ylim(-r-1, r+1)
     plt.grid(True)
     plt.axis('equal')
+    plt.title(r'f(t) = $ \frac{%.2f}{2} + \frac{-4(%.2f)}{π^{2}} ( \frac{1}{1^{2}}cos(\frac{πt}{%.2f}) + \frac{1}{3^{2}}cos(\frac{3πt}{%.2f}) + \frac{1}{5^{2}}cos(\frac{5πt}{%.2f}) + \frac{1}{7^{2}}cos(\frac{7πt}{%.2f}) + \frac{1}{9^{2}}cos(\frac{9πt}{%.2f}) + \frac{1}{11^{2}}sin(\frac{11πt}{%.2f}) + ... )$ ' % (r, r, s, s, s, s, s, s))
     plt.show()
 
 #print("1.-Serie Fourier funcion Cuadrada")
