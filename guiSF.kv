@@ -5,47 +5,56 @@ WindowManager:
     name: "Series de Fourier"
 
     GridLayout:
-        rows: 3
+        cols: 2
 
         GridLayout:
-            size_hint: [1, .25]
-            cols: 4
-            
-            Label:
-                text: "r = "
+            rows: 3
+
+            GridLayout:
+                size_hint: [1, .25]
+                cols: 4
+                
+                Label:
+                    text: "r = "
+                TextInput:
+                    id: r
+                    multiline: False
+                Label:
+                    text: "s = "
+                TextInput
+                    id: s
+                    multiline: False
+
+            GridLayout:
+                size_hint: [1, .25]
+                cols: 4
+
+
+                Label:
+                    text: "n = "
+                TextInput
+                    id: n
+                    multiline: False            
+                
+                Label:
+                    text: "Funcion : "
+                Spinner:
+                    id: funcion
+                    text: "Cuadrada"
+                    values: ["Cuadrada", "Triangular"]
+                    #background_color: color_button if self.state == 'normal' else color_button_pressed
+                    #background_down: 'atlas://data/images/defaulttheme/spinner'
+                    #color: color_font
+                    #option_cls: Factory.get("MySpinnerOption")
+                    #size_hint: None, None
+
+            Button:
+                size_hint: [1, .5]
+                text: 'Graficar'    
+                on_release: root.calcular()
+
+        GridLayout:
+            rows: 1
             TextInput:
-                id: r
-                multiline: False
-            Label:
-                text: "s = "
-            TextInput
-                id: s
-                multiline: False
-
-        GridLayout:
-            size_hint: [1, .25]
-            cols: 4
-
-
-            Label:
-                text: "n = "
-            TextInput
-                id: n
-                multiline: False            
-            
-            Label:
-                text: "Funcion : "
-            Spinner:
-                id: funcion
-                text: "Cuadrada"
-                values: ["Cuadrada", "Triangular"]
-                #background_color: color_button if self.state == 'normal' else color_button_pressed
-                #background_down: 'atlas://data/images/defaulttheme/spinner'
-                #color: color_font
-                #option_cls: Factory.get("MySpinnerOption")
-                #size_hint: None, None
-
-        Button:
-            size_hint: [1, .5]
-            text: 'Graficar'    
-            on_release: root.calcular()
+                id: resultados
+                multiline: True

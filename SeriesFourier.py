@@ -45,6 +45,8 @@ def serieFourierCuadrada(s, r, n):
     plt.ylim(-r-1, r+1)
     plt.grid(True)
     plt.axis('equal')
+    #plt.title(r'f(t) = $\frac{-4}{\pi} \sum_{i=1}^\infty \frac{%.2f}{n}sin(\frac{nt}{%.2f})$' % (r, s))
+    plt.title(r'f(t) = $\frac{-4}{\pi} ( \frac{%.2f}{1}sin(\frac{πt}{%.2f}) + \frac{%.2f}{3}sin(\frac{3πt}{%.2f}) + \frac{%.2f}{5}sin(\frac{5πt}{%.2f}) + \frac{%.2f}{7}sin(\frac{7πt}{%.2f}) + \frac{%.2f}{9}sin(\frac{9πt}{%.2f}) + \frac{%.2f}{11}sin(\frac{11πt}{%.2f}) + ... )$ ' % (r, s, r, s, r, s, r, s, r, s, r, s))
     plt.show()
 
 def serieFourierTriangular(s, r, n):
